@@ -2,11 +2,18 @@ import { Link } from "@remix-run/react";
 
 export default function Art(){
   return (
-    <div>
-      <h1>Art</h1>
+    <div className="art-content">
+      <header className="header">
+        <h1>Art</h1>
+      </header>
 
-      <Link to="/art/music">Music</Link>
-      <Link to="/art/visual">Visual</Link>
+      <div className="art-button-wrapper">
+        <Link to="/art/audio">Audio</Link>
+      </div>
+
+      <div className="art-button-wrapper">
+        <Link to="/art/visual">Visual</Link>
+      </div>
     </div>
   );
 }

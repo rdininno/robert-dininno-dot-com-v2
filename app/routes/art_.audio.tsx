@@ -7,7 +7,7 @@ export default function Audio() {
         <h1>Audio</h1>
       </header>
 
-      <Link to="">Albums I&apos;ve Made</Link>
+      <Link to="/art/audio/albums-made">Albums I&apos;ve Made</Link>
       <Link to="/art/audio/albums-recorded">Albums I&apos;ve Recorded</Link>
       <Link to="/art/audio/albums-played-on">Albums I&apos;ve Played On</Link>
     </div>

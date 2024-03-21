@@ -8,7 +8,7 @@ export default function Art(){
       </header>
 
       <div className="art-button-wrapper">
-        <Link to="/art/audio">Audio</Link>
+        <Link to="/art/audio"><Audio></Audio></Link>
       </div>
 
       <div className="art-button-wrapper">

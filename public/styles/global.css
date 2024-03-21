@@ -1,0 +1,508 @@
+html, body {
+  height: 100vh;
+  margin: 0;
+  background-color: #0800e7;
+  overflow-x: hidden;
+}
+
+/* Main Page */
+.main-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 85%;
+  margin: 20px 0;
+}
+
+h1 {
+  font-size: 10em;
+  font-family: "DM Sans";
+  margin: 0px;
+}
+
+header p {
+  font-size: 3em;
+}
+
+/* Employment page */
+.employment {
+  text-align: center;
+  background-color: #0800e7;
+}
+
+.employment .header {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.employment-content {
+  overflow-y: auto;
+  background-color: #0800e7;
+  color: #ffffff;
+  padding-bottom: 16%;
+}
+
+.resume {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 10px 30px;
+  color: #000;
+}
+
+.job-title {
+  font-size: 60px;
+  margin-bottom: 0px;
+}
+
+.job-year {
+  font-size: 25px;
+}
+
+.job-description {
+  font-size: 20px;
+}
+
+/* About Page */
+.about-page {
+  font-family: "DM Sans";
+  position: relative;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 90px 20px 20px;
+  background-color: #0800e7;
+  overflow: hidden;
+}
+
+.skills-container {
+  font-family: "Dosis";
+  display: flex;
+  flex-direction: column;
+  width: 45vw;
+}
+
+.skills-container p {
+    margin: 10px 0px 10px 0px;
+    font-size: 1.7em;
+    text-align: center;
+  }
+
+.email {
+  font-size: 4.5em;
+  margin: 0px;
+}
+
+.blurb {
+  width: 85%;
+  font-size: 2em;
+}
+
+/* Art Page */
+.art-content {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.art-button-wrapper {
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes strobeEffect {
+  0% { background-color: #000; color: #0800e7}
+  25% { background-color: #0800e7; color: #000 }
+  50% { background-color: #000; color: #0800e7}
+  75% { background-color: #0800e7; color: #000 }
+  100% { background-color: #000; color: #0800e7}
+}
+
+.art-page-button {
+  font-size: 5em;
+  background: #0800e7;
+  border: none;
+  font-weight: bold;
+  color: #000;
+  height: 70vh;
+  width: 70vh;
+}
+
+.art-page-button:hover {
+  color: #0800e7;
+  animation: strobeEffect 0.6s infinite;
+}
+
+/* Music Page */
+.music-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+
+.music-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.music-page-title {
+  display: flex;
+  justify-content: flex-end;
+  flex: 0 1 auto;
+}
+
+.music-page-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 1;
+}
+
+.music-page-menu-button {
+  flex: 1;
+  font-size: 3em;
+  background: #000;
+  border: none;
+  font-weight: bold;
+  color: #0800e7;
+  height: 70vh;
+  width: 100%;
+}
+
+.music-page-menu-button:hover {
+  background-color: #0800e7;
+  color: #000;
+}
+
+.albums-recorded {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #000;
+  width: 100vw;
+  justify-content: space-around;
+  align-content: flex-start;
+  min-height: 100vh;
+}
+
+.albums-recorded-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #000;
+  width: 100vw;
+  padding: 20px;
+  justify-content: space-around;
+  align-content: flex-start;
+}
+
+.albums-recorded-title {
+  font-family: "DM sans";
+  color: #0800e7;
+  font-size: 4em;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.albums-played-on {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  justify-content: space-around;
+  align-content: flex-start;
+  min-height: 100vh;
+}
+
+.albums-played-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  padding: 20px;
+  justify-content: space-around;
+  align-content: flex-start;
+}
+
+.albums-played-title {
+  font-family: "DM sans";
+  font-size: 4em;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.albums-played-main {
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+/* Album */
+.album-name {
+  font-size: 3em;
+  width: 70%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 50px;
+  border: 2px dashed black;
+  margin-bottom: 20px;
+}
+
+.album-name:hover {
+  background-color: #000;
+  color: #0800e7;
+}
+
+.album-names {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  height: 90%;
+  justify-content: center;
+  align-items: center;
+}
+
+.album-names-container {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.album-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: 100vh;
+}
+.album-list-background {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  background-color: #000;
+  height: 90%;
+  justify-content: center;
+  align-items: center;
+}
+
+.album-list-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.album-name-dark {
+  font-size: 2em;
+  width: 70%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 50px;
+  border: 2px dashed #0800e7;
+  margin-bottom: 20px;
+  color: #0800e7;
+}
+
+.album-name-dark:hover {
+  background-color: #0800e7;
+  color: #000;
+}
+
+.album-names-container-dark {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.album-list-dark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+}
+
+.album-list-background-dark {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  background-color: #0800e7;
+  height: 90%;
+  justify-content: center;
+  align-items: center;
+}
+
+.album-list-container-dark {
+  display: flex;
+  flex-direction: column;
+}
+
+.album-names-container-scroll {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.album-name-smaller {
+  font-size: 2em;
+  width: 70%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 50px;
+  border: 2px dashed black;
+  margin-bottom: 20px;
+}
+
+.album-name-smaller:hover {
+  background-color: #000;
+  color: #0800e7;
+}
+
+/* Audio Player */
+.audio-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: none;
+  border: 2px solid #0800e7;
+}
+
+.play-pause-icon {
+  height: 65%;
+  color: #0800e7;
+}
+
+.track-title {
+  font-size: 3em;
+  margin-left: 10px;
+  color: #0800e7;
+}
+
+.track {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Visual Page */
+.visual-content {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  font-size: 9em;
+  font-family: "DM Sans";
+}
+
+.visual-content:hover {
+  color: #0800e7;
+  animation: strobeEffect 0.6s infinite;
+}
+
+.visual-content {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  font-size: 9em;
+  font-family: "DM Sans";
+}
+
+/* Portforlio Page */
+.portfolio-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.portfolio-write-up {
+  font-size: 3em;
+}
+
+/* ArrowButton */
+.arrowButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  aspect-ratio: 1 / 1;
+  border: 2px solid #000;
+  background-color: #0800e700;
+  font-size: 50px;
+  line-height: 1;
+  transition: background-color 0.2s;
+  z-index: 10;
+}
+
+.arrowButton:hover {
+  background-color: #000000;
+  color: #0800e7;
+}
+
+.arrowButton svg {
+  height: 100%;
+  width: 100%;
+  color: #000;
+  }
+
+/* button */
+.button {
+  border-radius: 5px;
+  border: 2px solid #000;
+  padding: 15px 30px;
+  background-color: #0800e7;
+  font-size: 50px;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #000000;
+  color: #0800e7;
+}
+
+/* iframe */
+.iframe{
+  border: 0;
+  width: 380px;
+  height: 500px;
+}

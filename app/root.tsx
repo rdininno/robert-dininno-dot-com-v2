@@ -19,6 +19,9 @@ export default function App() {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="/styles/global.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" />
         <Meta />
         <Links />
       </head>

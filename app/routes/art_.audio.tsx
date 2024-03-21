@@ -9,7 +9,7 @@ export default function Audio() {
 
       <Link to="">Albums I&apos;ve Made</Link>
       <Link to="/art/audio/albums-recorded">Albums I&apos;ve Recorded</Link>
-      <Link to="">Albums I&apos;ve Played On</Link>
+      <Link to="/art/audio/albums-played-on">Albums I&apos;ve Played On</Link>
     </div>
   );
 }

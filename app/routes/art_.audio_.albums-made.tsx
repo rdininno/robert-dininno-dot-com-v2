@@ -66,17 +66,20 @@ export default function Album() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isAlbumListVisible, setIsAlbumListVisible] = useState(false);
   const [selectedAlbumIndex, setSelectedAlbumIndex] = useState<number | null>(null);
-  const audioRef = useRef<HTMLAudioElement>(new Audio());
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
+    audioRef.current = new Audio();
     return () => {
-      audioRef.current.pause();
-      audioRef.current.src = "";
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.src = "";
+      }
     };
   }, []);
 
   async function playTrack(index: number) {
-    if (selectedAlbumIndex === null) return;
+    if (selectedAlbumIndex === null || audioRef.current === null) return;
 
     const track = albumData[selectedAlbumIndex].tracks[index];
     try {
@@ -105,7 +108,7 @@ export default function Album() {
 
   useEffect(() => {
     const handleTrackEnd = () => {
-      if (selectedAlbumIndex === null || currentTrackIndex === null) return;
+      if (selectedAlbumIndex === null || currentTrackIndex === null || audioRef.current === null) return;
 
       const nextIndex = currentTrackIndex + 1;
       if (nextIndex < albumData[selectedAlbumIndex].tracks.length) {
@@ -116,18 +119,25 @@ export default function Album() {
       }
     };
 
-    audioRef.current.addEventListener("ended", handleTrackEnd);
+    if (audioRef.current) {
+      audioRef.current.addEventListener("ended", handleTrackEnd);
+    }
+
     return () => {
-      audioRef.current.removeEventListener("ended", handleTrackEnd);
+      if (audioRef.current) {
+        audioRef.current.removeEventListener("ended", handleTrackEnd);
+      }
     };
   }, [currentTrackIndex, selectedAlbumIndex, albumData]);
 
   const handleAlbumSelection = (index: number): void => {
-    if (isPlaying || currentTrackIndex !== null) {
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0;
-      setIsPlaying(false);
-      setCurrentTrackIndex(null);
+    if (audioRef.current !== null) {
+      if (isPlaying || currentTrackIndex !== null) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
+        setIsPlaying(false);
+        setCurrentTrackIndex(null);
+      }
     }
 
     setSelectedAlbumIndex(index);

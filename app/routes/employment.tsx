@@ -11,7 +11,7 @@ export default function Employment(){
         <section className="experience" id="resume-section">
           <Job
             title="Developer at OneFeather Mobile Technologies Ltd."
-            year="Aug 22 - Present"
+            year="Aug 2022 - Present"
             location="Victoria BC"
             description={[
               "Supported the development and refinement of front and back-end web development using Ruby on Rails, JavaScript, Elixir, Phoenix LiveView, React, and HTML/CSS to build applications to support Indigenous sovereignty in the digital era, such as status card renewal support and digital voting platforms for Nation elections.",
@@ -24,7 +24,7 @@ export default function Employment(){
           />
           <Job
             title="Contract Support Agent at OneFeather Mobile Technologies Ltd."
-            year="Sept 21 - May 22"
+            year="Sept 2021 - May 2022"
             location="Victoria BC"
             description={[
               "Evaluated status card applications using step review process prior to their submission to Indigenous Services Canada, communicating directly with clients as needed to ensure application compliance with federal requirements.",
@@ -33,7 +33,7 @@ export default function Employment(){
           />
           <Job
             title="Merchant Success Specialist at Pixel Union"
-            year="May 17 - Dec 19"
+            year="May 2017 - Dec 2019"
             location="Victoria BC"
             description={[
               "Managed the daily queue of support requests for Pixel Union's Shopify theme owners.",

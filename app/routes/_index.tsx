@@ -19,10 +19,10 @@ export default function Index() {
       </header>
 
       <div className="menu">
-        <Link className="button" to ="/employment">Employment</Link>
-        <Link className="button" to ="/art">Art</Link>
-        <Link className="button" to ="/portfolio">Portfolio</Link>
-        <Link className="button" to ="/about">About</Link>
+        <Link className="button button-employment" to ="/employment">Employment</Link>
+        <Link className="button button-art" to ="/art">Art</Link>
+        <Link className="button button-portfolio" to ="/portfolio">Portfolio</Link>
+        <Link className="button button-about" to ="/about">About</Link>
       </div>
     </div>
   );

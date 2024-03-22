@@ -65,15 +65,18 @@ header p {
 }
 
 .job-title {
+  font-family: 'Dosis';
   font-size: 60px;
   margin-bottom: 0px;
 }
 
 .job-year {
+  font-family: 'Dosis';
   font-size: 25px;
 }
 
 .job-description {
+  font-family: 'Dosis';
   font-size: 20px;
 }
 
@@ -174,12 +177,12 @@ header p {
 
 .music-header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-end;
 }
 
 .music-header h1 {
-  margin: 0px 0px 0px 20px;
+  margin: 0px 20px 0px 0px;
 }
 
 .music-page-title {
@@ -546,4 +549,883 @@ header p {
   border: 0;
   width: 380px;
   height: 500px;
+}
+
+@media (max-width: 425px) {
+  .header {
+    width: 85%;
+  }
+
+  h1 {
+    font-size: 2.25em;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    gap: 20px;
+  }
+
+  .button {
+    text-decoration: none;
+    font-family: 'DM Sans';
+    color: #0800e7;
+    border-radius: 5px;
+    border: 2px solid #0800e7;
+    padding: 15px 30px;
+    background-color: #000;
+    font-size: 1.5em;
+  }
+
+  .button:hover {
+    background-color: #000000;
+    color: #0800e7;
+  }
+
+  .button-art{
+    border-radius: 50px;
+  }
+
+  .button-about{
+    border-radius: 50px 5px 50px 5px;
+  }
+
+  .job-title {
+    font-family: 'Dosis';
+    font-size: 2em;
+    margin-bottom: 0px;
+  }
+
+  .job-year {
+    font-family: 'Dosis';
+    font-size: 1.125em;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  .job-description {
+    font-family: 'Dosis';
+    font-size: 1em;
+  }
+
+  .email {
+    font-size: 1.125em;
+    margin: 0px;
+  }
+
+  .blurb {
+    width: 100%;
+    font-size: 1.5em;
+  }
+
+  .about-page {
+    font-family: "DM Sans";
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #0800e7;
+    overflow: hidden;
+  }
+
+  .skills-container {
+    font-family: "Dosis";
+    display: flex;
+    flex-direction: row;
+    font-size: 1.125em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0px 5px;
+    background-color: #000;
+    color: #0700e7;
+    padding: 35px 20px;
+    max-width: max-content;
+    width: auto;
+  }
+
+  .skills-container p {
+    margin: 5px 0px;
+    font-size: 1.125em;
+  }
+
+  .portfolio-write-up {
+    font-size: 1em;
+  }
+
+  .portfolio-content {
+    width: 90%;
+    text-align: center;
+  }
+
+  .art-content {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+  }
+
+  .art-page-button {
+    text-decoration: none;
+    font-family: 'DM Sans';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    background: #0800e7;
+    border: none;
+    font-weight: bold;
+    color: #000;
+    height: 50vh;
+    width: 100vh;
+  }
+
+  .art-page-button:hover {
+    color: #000;
+    animation: none;
+  }
+
+  .visual-content {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    font-family: "DM Sans";
+  }
+
+  .visual-content:hover {
+    color: #000;
+    animation: none;
+  }
+
+  .music-page-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  .music-page-menu-button {
+    font-family: 'DM Sans';
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    background: #000;
+    border: none;
+    font-weight: bold;
+    text-decoration: none;
+    color: #0800e7;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .music-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .album-names-container {
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    gap: 0px 10px;
+  }
+
+  .album-name {
+    background-color: #0700e7;
+    font-size: 1.5em;
+    min-width: max-content;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50px;
+    border: 2px dashed black;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .album-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .album-list-background {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #000;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .track-title {
+    font-family: dosis;
+    font-size: 1.5em;
+    margin-left: 10px;
+    color: #0800e7;
+  }
+
+  .audio-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background: none;
+    border: 2px solid #0800e7;
+  }
+
+  .albums-recorded {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    background-color: #000;
+    width: 100vw;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+  }
+
+  .album-names-container-dark {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    gap: 0px 10px;
+    padding: 0px;
+  }
+
+  .album-name-dark {
+    background-color: #000;
+    font-size: 1.25em;
+    min-width: max-content;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50px;
+    border: 2px dashed #0800e7;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: #0800e7;
+  }
+
+  .album-name-dark:hover {
+    background-color: #000;
+    color: #0800e7;
+  }
+
+  .album-list-dark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .album-list-background-dark {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background-color: #0800e7;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .iframe {
+    border: 0;
+    width: 300px;
+    height: 406px;
+  }
+
+  .album-names-container-scroll{
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    gap: 0px 10px;
+    padding: 0px;
+  }
+
+  .album-name-smaller{
+    background-color: #0700e7;
+    font-size: 1.5em;
+    min-width: max-content;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50px;
+    border: 2px dashed black;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 667px) {
+  .main-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    margin: 30px 0px;
+  }
+
+  .header {
+    width: 85%;
+  }
+
+  h1 {
+    font-size: 4.25em;
+}
+
+  header p {
+    font-size: 1.5em;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    gap: 20px;
+  }
+
+  .button {
+    text-decoration: none;
+    font-family: 'DM Sans';
+    color: #0800e7;
+    border-radius: 5px;
+    border: 2px solid #0800e7;
+    padding: 15px 30px;
+    background-color: #000;
+    font-size: 1.5em;
+  }
+
+  .button:hover {
+    background-color: #000000;
+    color: #0800e7;
+  }
+
+  .button-art{
+    border-radius: 50px;
+  }
+
+  .button-about{
+    border-radius: 50px 5px 50px 5px;
+  }
+
+  .employment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #0800e7;
+  }
+
+  .job-title {
+    font-family: 'Dosis';
+    font-size: 2em;
+    margin-bottom: 0px;
+  }
+
+  .job-year {
+    font-family: 'Dosis';
+    font-size: 1.125em;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  .job-description {
+    font-family: 'Dosis';
+    font-size: 1em;
+  }
+
+  .email {
+    font-size: 1.125em;
+    margin: 0px;
+  }
+
+  .blurb {
+    width: 100%;
+    font-size: 1.5em;
+  }
+
+  .about-page {
+    font-family: "DM Sans";
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #0800e7;
+    overflow: hidden;
+  }
+
+  .skills-container {
+    font-family: "Dosis";
+    display: flex;
+    flex-direction: row;
+    font-size: 1.125em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0px 5px;
+    background-color: #000;
+    color: #0700e7;
+    padding: 5px 25px;
+    max-width: max-content;
+    width: auto;
+  }
+
+  .skills-container p {
+    margin: 5px 0px;
+    font-size: 1.125em;
+  }
+
+  .portfolio-write-up {
+    font-size: 1em;
+  }
+
+  .portfolio-content {
+    width: 90%;
+    text-align: center;
+  }
+
+  .art-content {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+  }
+
+  .art-page-button {
+    text-decoration: none;
+    font-family: 'DM Sans';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    background: #0800e7;
+    border: none;
+    font-weight: bold;
+    color: #000;
+    height: 50vh;
+    width: 100vh;
+  }
+
+  .art-page-button:hover {
+    color: #000;
+    animation: none;
+  }
+
+  .visual-content {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    font-family: "DM Sans";
+  }
+
+  .visual-content:hover {
+    color: #000;
+    animation: none;
+  }
+
+  .music-page-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  .music-page-menu-button {
+    font-family: 'DM Sans';
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    background: #000;
+    border: none;
+    font-weight: bold;
+    text-decoration: none;
+    color: #0800e7;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .music-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .album-names-container {
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    gap: 0px 10px;
+  }
+
+  .album-name {
+    background-color: #0700e7;
+    font-size: 1.5em;
+    min-width: max-content;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50px;
+    border: 2px dashed black;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .album-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .album-list-background {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #000;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .track-title {
+    font-family: dosis;
+    font-size: 1.5em;
+    margin-left: 10px;
+    color: #0800e7;
+  }
+
+  .audio-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background: none;
+    border: 2px solid #0800e7;
+  }
+
+  .albums-recorded {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    background-color: #000;
+    width: 100vw;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+  }
+
+  .album-names-container-dark {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    gap: 0px 10px;
+    padding: 0px;
+  }
+
+  .album-name-dark {
+    background-color: #000;
+    font-size: 1.25em;
+    min-width: max-content;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50px;
+    border: 2px dashed #0800e7;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: #0800e7;
+  }
+
+  .album-name-dark:hover {
+    background-color: #000;
+    color: #0800e7;
+  }
+
+  .album-list-dark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .album-list-background-dark {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background-color: #0800e7;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .iframe {
+    border: 0;
+    width: 230px;
+    height: 354px;
+  }
+
+  .album-names-container-scroll{
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    gap: 0px 10px;
+    padding: 0px;
+  }
+
+  .album-name-smaller{
+    background-color: #0700e7;
+    font-size: 1.5em;
+    min-width: max-content;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50px;
+    border: 2px dashed black;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 6em;
+    font-family: "DM Sans";
+    margin: 0px;
+  }
+
+  header p {
+    font-size: 2em;
+  }
+
+  .button {
+    text-decoration: none;
+    font-family: 'DM Sans';
+    color: #000;
+    border-radius: 5px;
+    border: 2px solid #000;
+    padding: 15px 30px;
+    background-color: #0800e7;
+    font-size: 1.6em;
+    transition: none;
+  }
+
+
+  .button:hover {
+  background-color: #0800e7;
+  color: #000000;
+  }
+
+  .button-art{
+    border-radius: 50px;
+  }
+
+  .button-about{
+    border-radius: 50px 5px 50px 5px;
+  }
+
+  .job-title {
+    font-family: 'Dosis';
+    font-size: 3em;
+    margin-bottom: 0px;
+  }
+
+  .job-year {
+    font-family: 'Dosis';
+    font-size: 1.25em;
+    margin: 10px 0px 0px 0px;
+  }
+
+  .portfolio-write-up {
+    font-size: 2em;
+  }
+
+  .email {
+    font-size: 2.5em;
+    margin: 0px;
+  }
+
+  .art-page-button:hover {
+    color: #000000;
+    animation: none;
+  }
+
+  .visual-content:hover {
+    color: #000000;
+    animation: none;
+  }
+
+  .visual-content {
+    font-size: 6em;
+  }
+
+  .music-page-menu {
+    flex-direction: column;
+  }
+
+  .album-name {
+    font-size: 2em;
+  }
+
+  .album-name:hover {
+    background-color: #0800e7;
+    color: #000000;
+  }
+
+  .track-title {
+    font-size: 2em;
+  }
+
+  .album-name-dark {
+    font-size: 1.3em;
+  }
+
+  .album-name-dark:hover {
+    background-color: #000000;
+    color: #0800e7;
+  }
+
+  .album-list-dark {
+    height: 100vh;
+  }
+
+  .iframe {
+    border: 0;
+    width: 310px;
+    height: 417px;
+  }
+
+  .album-name-smaller {
+    font-size: 1.3em;
+  }
+
+  .album-name-smaller:hover {
+    background-color: #0800e7;
+    color: #000000;
+  }
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 7em;
+    font-family: "DM Sans";
+    margin: 0px;
+  }
+
+  header p {
+    font-size: 2em;
+  }
+
+  .button {
+    text-decoration: none;
+    font-family: 'DM Sans';
+    color: #000;
+    border-radius: 5px;
+    border: 2px solid #000;
+    padding: 15px 30px;
+    background-color: #0800e7;
+    font-size: 2.5em;
+    transition: none;
+  }
+
+  .button-art{
+    border-radius: 50px;
+  }
+
+  .button-about{
+    border-radius: 50px 5px 50px 5px;
+  }
+
+  .job-title {
+    font-family: 'Dosis';
+    font-size: 3em;
+    margin-bottom: 0px;
+  }
+
+  .job-year {
+    font-family: 'Dosis';
+    font-size: 1.25em;
+    margin: 10px 0px 0px 0px;
+  }
+
+  .portfolio-write-up {
+    font-size: 2em;
+  }
+
+  .email {
+    font-size: 2.5em;
+    margin: 0px;
+  }
+
+  .visual-content {
+    font-size: 6em;
+  }
+
+  .music-page-menu {
+    flex-direction: column;
+  }
+
+  .album-name {
+    font-size: 2em;
+  }
+
+  .track-title {
+    font-size: 2em;
+  }
+
+  .album-name-dark {
+    font-size: 1.3em;
+  }
+
+  .album-list-dark {
+    height: 100vh;
+  }
+
+  .album-name-smaller {
+    font-size: 1.3em;
+  }
 }

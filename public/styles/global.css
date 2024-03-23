@@ -5,7 +5,6 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Main Page */
 .main-page {
   display: flex;
   flex-direction: column;
@@ -15,26 +14,34 @@ html, body {
   text-align: center;
 }
 
+.header {
+  width: 90%;
+}
+
 .menu {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   width: 85%;
   margin: 20px 0;
+  gap: 20px;
 }
 
 h1 {
-  font-size: 10em;
+  font-size: 2.25em;
   font-family: "DM Sans";
   margin: 0px;
 }
 
 header p {
-  font-size: 3em;
+  font-family: 'DM Sans';
+  font-size: 1em;
 }
 
-/* Employment page */
 .employment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   background-color: #0800e7;
 }
@@ -66,25 +73,24 @@ header p {
 
 .job-title {
   font-family: 'Dosis';
-  font-size: 60px;
+  font-size: 2em;
   margin-bottom: 0px;
 }
 
 .job-year {
   font-family: 'Dosis';
-  font-size: 25px;
+  font-size: 1.125em;
 }
 
 .job-description {
   font-family: 'Dosis';
-  font-size: 20px;
+  font-size: 1em;
 }
 
-/* About Page */
 .about-page {
   font-family: "DM Sans";
   position: relative;
-  max-height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -93,13 +99,18 @@ header p {
   overflow: hidden;
 }
 
+.about-page h1 {
+  font-size: 4.25em;
+}
+
 .skills-container {
   font-family: "Dosis";
-  font-size: 1.25em;
   display: flex;
   flex-direction: row;
+  font-size: 1.125em;
   flex-wrap: wrap;
-  gap: 20px;
+  justify-content: space-between;
+  gap: 0px 5px;
   background-color: #000;
   color: #0700e7;
   padding: 35px 20px;
@@ -108,43 +119,26 @@ header p {
 }
 
 .skills-container p {
-    margin: 10px 0px 10px 0px;
-    font-size: 1.7em;
-    text-align: center;
-  }
+  margin: 5px 0px;
+  font-size: 1.125em;
+}
 
 .email {
-  font-size: 4.5em;
+  font-size: 1.125em;
   margin: 0px;
 }
 
 .blurb {
-  width: 85%;
-  font-size: 2em;
+  width: 100%;
+  font-size: 1.5em;
 }
 
-/* Art Page */
 .art-content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
-  justify-content: center;
   align-items: center;
-}
-
-.art-button-wrapper {
-  width: 50vw;
-  display: flex;
-  justify-content: center;
-}
-
-@keyframes strobeEffect {
-  0% { background-color: #000; color: #0800e7}
-  25% { background-color: #0800e7; color: #000 }
-  50% { background-color: #000; color: #0800e7}
-  75% { background-color: #0800e7; color: #000 }
-  100% { background-color: #000; color: #0800e7}
 }
 
 .art-page-button {
@@ -153,21 +147,20 @@ header p {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 5em;
+  font-size: 4em;
   background: #0800e7;
   border: none;
   font-weight: bold;
   color: #000;
-  height: 70vh;
-  width: 70vh;
+  height: 50vh;
+  width: 100vh;
 }
 
 .art-page-button:hover {
-  color: #0800e7;
-  animation: strobeEffect 0.6s infinite;
+  color: #000;
+  animation: none;
 }
 
-/* Music Page */
 .music-page {
   display: flex;
   flex-direction: column;
@@ -193,7 +186,7 @@ header p {
 
 .music-page-menu {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   flex-grow: 1;
 }
@@ -204,11 +197,10 @@ header p {
   flex: 1;
   justify-content: center;
   align-items: center;
-  font-size: 3em;
+  font-size: 2em;
   background: #000;
   border: none;
   font-weight: bold;
-
   text-decoration: none;
   color: #0800e7;
   text-align: center;
@@ -220,14 +212,14 @@ header p {
   color: #000;
 }
 
-/* albums recorded */
 .albums-recorded {
   display: flex;
+  flex-direction: column-reverse;
   flex-wrap: wrap;
   background-color: #000;
   width: 100vw;
-  justify-content: space-around;
-  align-content: flex-start;
+  justify-content: center;
+  align-content: center;
   min-height: 100vh;
 }
 
@@ -284,25 +276,27 @@ header p {
 }
 
 
-/* ablums made */
 .music-content {
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .album-name {
   background-color: #0700e7;
-  font-size: 3em;
-  width: 70%;
+  font-size: 1.5em;
+  min-width: max-content;
   text-align: center;
   padding: 10px;
   border-radius: 50px;
   border: 2px dashed black;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .album-name:hover {
-  background-color: #000;
-  color: #0800e7;
+  background-color: #0800e7;
+  color: #000;
 }
 
 .album-names {
@@ -316,25 +310,28 @@ header p {
 
 .album-names-container {
   display: flex;
-  flex-direction: column;
-  width: 50vw;
-  justify-content: center;
+  flex-direction: row;
+  width: 90vw;
+  justify-content: flex-start;
   align-items: center;
+  overflow-x: auto;
+  gap: 0px 10px;
 }
 
 .album-list {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50vw;
+  width: 100vw;
   height: 100vh;
 }
+
 .album-list-background {
   display: flex;
   flex-direction: column;
-  width: 85%;
+  width: 100%;
   background-color: #000;
-  height: 90%;
+  height: 100%;
   justify-content: center;
   align-items: center;
 }
@@ -346,44 +343,47 @@ header p {
 
 .album-name-dark {
   background-color: #000;
-  font-size: 2em;
-  width: 70%;
+  font-size: 1.25em;
+  min-width: max-content;
   text-align: center;
   padding: 10px;
   border-radius: 50px;
   border: 2px dashed #0800e7;
   margin-bottom: 20px;
+  margin-top: 20px;
   color: #0800e7;
 }
 
 .album-name-dark:hover {
-  background-color: #0800e7;
-  color: #000;
+  background-color: #000;
+  color: #0800e7;
 }
 
 .album-names-container-dark {
   display: flex;
-  flex-direction: column;
-  width: 50vw;
-  max-height: 90vh;
-  overflow-y: auto;
+  flex-direction: row;
+  width: 100vw;
+  justify-content: flex-start;
   align-items: center;
-  padding-top: 40px;
+  overflow-x: auto;
+  gap: 0px 10px;
+  padding: 0px;
 }
 
 .album-list-dark {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50vw;
+  width: 100vw;
+  height: 100vh;
 }
 
 .album-list-background-dark {
   display: flex;
   flex-direction: column;
-  width: 85%;
+  width: 100vw;
   background-color: #0800e7;
-  height: 90%;
+  height: 100vh;
   justify-content: center;
   align-items: center;
 }
@@ -393,45 +393,44 @@ header p {
   flex-direction: column;
 }
 
-.album-names-container-scroll {
+.album-names-container-scroll{
   display: flex;
-  flex-direction: column;
-  width: 50vw;
-  max-height: 90vh;
-  overflow-y: auto;
-  justify-content: center;
+  flex-direction: row;
+  width: 90vw;
+  justify-content: flex-start;
   align-items: center;
-  padding-top: 40px;
+  overflow-x: auto;
+  gap: 0px 10px;
+  padding: 0px;
 }
 
-.album-name-smaller {
+.album-name-smaller{
   background-color: #0700e7;
-  font-size: 2em;
-  width: 70%;
+  font-size: 1.5em;
+  min-width: max-content;
   text-align: center;
   padding: 10px;
   border-radius: 50px;
   border: 2px dashed black;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .album-name-smaller:hover {
-  background-color: #000;
-  color: #0800e7;
+  background-color: #0800e7;
+  color: #000;
 }
 
-/* Audio Player */
 .audio-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   border-radius: 100%;
   background: none;
   border: 2px solid #0800e7;
 }
-
 .play-pause-icon {
   height: 65%;
   color: #0800e7;
@@ -439,7 +438,7 @@ header p {
 
 .track-title {
   font-family: dosis;
-  font-size: 3em;
+  font-size: 1.5em;
   margin-left: 10px;
   color: #0800e7;
 }
@@ -451,33 +450,21 @@ header p {
   margin-bottom: 10px;
 }
 
-/* Visual Page */
 .visual-content {
   display: flex;
   height: 100vh;
   width: 100vw;
   justify-content: center;
   align-items: center;
-  font-size: 9em;
+  font-size: 3em;
   font-family: "DM Sans";
 }
 
 .visual-content:hover {
-  color: #0800e7;
-  animation: strobeEffect 0.6s infinite;
+  color: #000;
+  animation: none;
 }
 
-.visual-content {
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
-  font-size: 9em;
-  font-family: "DM Sans";
-}
-
-/* Portforlio Page */
 .portfolio-page {
   display: flex;
   flex-direction: column;
@@ -486,49 +473,30 @@ header p {
   height: 100vh;
 }
 
-.portfolio-write-up {
-  font-size: 3em;
-}
-
-/* ArrowButton */
-.arrowButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
-  aspect-ratio: 1 / 1;
-  border: 2px solid #000;
-  background-color: #0800e700;
-  font-size: 50px;
-  line-height: 1;
-  transition: background-color 0.2s;
-  z-index: 10;
-}
-
-.arrowButton:hover {
-  background-color: #000000;
-  color: #0800e7;
-}
-
-.arrowButton svg {
-  height: 100%;
+.portfolio-page header {
   width: 100%;
-  color: #000;
-  }
+  text-align: center;
+}
 
-/* button */
+.portfolio-write-up {
+  font-size: 1em;
+}
+
+.portfolio-content {
+  font-family: 'dosis';
+  width: 90%;
+  text-align: center;
+}
+
 .button {
   text-decoration: none;
   font-family: 'DM Sans';
-  color: #000;
+  color: #0800e7;
   border-radius: 5px;
-  border: 2px solid #000;
+  border: 2px solid #0800e7;
   padding: 15px 30px;
-  background-color: #0800e7;
-  font-size: 50px;
-  transition: background-color 0.2s;
+  background-color: #000;
+  font-size: 1.5em;
 }
 
 .button:hover {
@@ -544,345 +512,19 @@ header p {
   border-radius: 50px 5px 50px 5px;
 }
 
-/* iframe */
-.iframe{
+.iframe {
   border: 0;
-  width: 380px;
-  height: 500px;
+  width: 300px;
+  height: 406px;
 }
 
-@media (max-width: 425px) {
-  .header {
-    width: 85%;
-  }
-
+@media screen and (min-width: 425px) {
   h1 {
-    font-size: 2.25em;
-  }
-
-  header p {
-    font-size: 1em;
-  }
-
-  .menu {
-    display: flex;
-    flex-direction: column;
-    width: 85%;
-    gap: 20px;
-  }
-
-  .button {
-    text-decoration: none;
-    font-family: 'DM Sans';
-    color: #0800e7;
-    border-radius: 5px;
-    border: 2px solid #0800e7;
-    padding: 15px 30px;
-    background-color: #000;
-    font-size: 1.5em;
-  }
-
-  .button:hover {
-    background-color: #000000;
-    color: #0800e7;
-  }
-
-  .button-art{
-    border-radius: 50px;
-  }
-
-  .button-about{
-    border-radius: 50px 5px 50px 5px;
-  }
-
-  .job-title {
-    font-family: 'Dosis';
-    font-size: 2em;
-    margin-bottom: 0px;
-  }
-
-  .job-year {
-    font-family: 'Dosis';
-    font-size: 1.125em;
-    margin-top: 10px;
-    margin-bottom: 0px;
-  }
-
-  .job-description {
-    font-family: 'Dosis';
-    font-size: 1em;
-  }
-
-  .email {
-    font-size: 1.125em;
-    margin: 0px;
-  }
-
-  .blurb {
-    width: 100%;
-    font-size: 1.5em;
-  }
-
-  .about-page {
-    font-family: "DM Sans";
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 20px;
-    background-color: #0800e7;
-    overflow: hidden;
-  }
-
-  .skills-container {
-    font-family: "Dosis";
-    display: flex;
-    flex-direction: row;
-    font-size: 1.125em;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 0px 5px;
-    background-color: #000;
-    color: #0700e7;
-    padding: 35px 20px;
-    max-width: max-content;
-    width: auto;
-  }
-
-  .skills-container p {
-    margin: 5px 0px;
-    font-size: 1.125em;
-  }
-
-  .portfolio-write-up {
-    font-size: 1em;
-  }
-
-  .portfolio-content {
-    width: 90%;
-    text-align: center;
-  }
-
-  .art-content {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: 100vh;
-    align-items: center;
-  }
-
-  .art-page-button {
-    text-decoration: none;
-    font-family: 'DM Sans';
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 4em;
-    background: #0800e7;
-    border: none;
-    font-weight: bold;
-    color: #000;
-    height: 50vh;
-    width: 100vh;
-  }
-
-  .art-page-button:hover {
-    color: #000;
-    animation: none;
-  }
-
-  .visual-content {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
-    font-size: 4em;
-    font-family: "DM Sans";
-  }
-
-  .visual-content:hover {
-    color: #000;
-    animation: none;
-  }
-
-  .music-page-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-grow: 1;
-  }
-
-  .music-page-menu-button {
-    font-family: 'DM Sans';
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    background: #000;
-    border: none;
-    font-weight: bold;
-    text-decoration: none;
-    color: #0800e7;
-    text-align: center;
-    margin: 10px;
-  }
-
-  .music-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .album-names-container {
-    display: flex;
-    flex-direction: row;
-    width: 90vw;
-    justify-content: flex-start;
-    align-items: center;
-    overflow-x: auto;
-    gap: 0px 10px;
-  }
-
-  .album-name {
-    background-color: #0700e7;
-    font-size: 1.5em;
-    min-width: max-content;
-    text-align: center;
-    padding: 10px;
-    border-radius: 50px;
-    border: 2px dashed black;
-    margin-bottom: 20px;
-    margin-top: 20px;
-  }
-
-  .album-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-  }
-
-  .album-list-background {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-color: #000;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .track-title {
-    font-family: dosis;
-    font-size: 1.5em;
-    margin-left: 10px;
-    color: #0800e7;
-  }
-
-  .audio-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 35px;
-    height: 35px;
-    border-radius: 100%;
-    background: none;
-    border: 2px solid #0800e7;
-  }
-
-  .albums-recorded {
-    display: flex;
-    flex-direction: column-reverse;
-    flex-wrap: wrap;
-    background-color: #000;
-    width: 100vw;
-    justify-content: center;
-    align-content: center;
-    min-height: 100vh;
-  }
-
-  .album-names-container-dark {
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-    justify-content: flex-start;
-    align-items: center;
-    overflow-x: auto;
-    gap: 0px 10px;
-    padding: 0px;
-  }
-
-  .album-name-dark {
-    background-color: #000;
-    font-size: 1.25em;
-    min-width: max-content;
-    text-align: center;
-    padding: 10px;
-    border-radius: 50px;
-    border: 2px dashed #0800e7;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    color: #0800e7;
-  }
-
-  .album-name-dark:hover {
-    background-color: #000;
-    color: #0800e7;
-  }
-
-  .album-list-dark {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-  }
-
-  .album-list-background-dark {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    background-color: #0800e7;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .iframe {
-    border: 0;
-    width: 300px;
-    height: 406px;
-  }
-
-  .album-names-container-scroll{
-    display: flex;
-    flex-direction: row;
-    width: 90vw;
-    justify-content: flex-start;
-    align-items: center;
-    overflow-x: auto;
-    gap: 0px 10px;
-    padding: 0px;
-  }
-
-  .album-name-smaller{
-    background-color: #0700e7;
-    font-size: 1.5em;
-    min-width: max-content;
-    text-align: center;
-    padding: 10px;
-    border-radius: 50px;
-    border: 2px dashed black;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    font-size: 3em;
   }
 }
 
-@media (max-width: 667px) {
+@media screen and (min-width: 667px) {
   .main-page {
     display: flex;
     flex-direction: column;
@@ -1033,7 +675,7 @@ header p {
     font-weight: bold;
     color: #000;
     height: 50vh;
-    width: 100vh;
+    width: 50vw;
   }
 
   .art-page-button:hover {
@@ -1231,9 +873,19 @@ header p {
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (min-width: 768px) {
+  .main-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    margin: 30px 0px;
+  }
+
   h1 {
-    font-size: 6em;
+    font-size: 5.5em;
     font-family: "DM Sans";
     margin: 0px;
   }
@@ -1245,19 +897,19 @@ header p {
   .button {
     text-decoration: none;
     font-family: 'DM Sans';
-    color: #000;
+    color: #0800e7;
     border-radius: 5px;
     border: 2px solid #000;
     padding: 15px 30px;
-    background-color: #0800e7;
+    background-color: #000;
     font-size: 1.6em;
     transition: none;
   }
 
 
   .button:hover {
-  background-color: #0800e7;
-  color: #000000;
+  background-color: #000000;
+  color: #0800e7;
   }
 
   .button-art{
@@ -1284,9 +936,28 @@ header p {
     font-size: 2em;
   }
 
+  .about-page h1 {
+    font-size: 7em;
+  }
+
   .email {
     font-size: 2.5em;
     margin: 0px;
+  }
+
+  .skills-container {
+    font-family: "Dosis";
+    display: flex;
+    flex-direction: row;
+    font-size: 1.7em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px 5px;
+    background-color: #000;
+    color: #0700e7;
+    padding: 30px 25px;
+    max-width: max-content;
+    width: auto;
   }
 
   .art-page-button:hover {
@@ -1303,62 +974,790 @@ header p {
     font-size: 6em;
   }
 
-  .music-page-menu {
+  .music-page {
+    display: flex;
     flex-direction: column;
+    height: 100vh;
+    position: relative;
+  }
+
+  .music-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .music-header h1 {
+    margin: 0px 20px 0px 0px;
+  }
+
+  .music-page-title {
+    display: flex;
+    justify-content: flex-end;
+    flex: 0 1 auto;
+  }
+
+  .music-page-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  .music-page-menu-button {
+    font-family: 'DM Sans';
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    background: #000;
+    border: none;
+    font-weight: bold;
+
+    text-decoration: none;
+    color: #0800e7;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .music-page-menu-button:hover {
+    background-color: #0800e7;
+    color: #000;
+  }
+
+  .music-content {
+    display: flex;
+    flex-direction: row;
   }
 
   .album-name {
+    background-color: #0700e7;
     font-size: 2em;
+    width: 70%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50px;
+    border: 2px dashed black;
+    margin-bottom: 20px;
+    margin-top: 0px;
   }
 
   .album-name:hover {
-    background-color: #0800e7;
-    color: #000000;
-  }
-
-  .track-title {
-    font-size: 2em;
-  }
-
-  .album-name-dark {
-    font-size: 1.3em;
-  }
-
-  .album-name-dark:hover {
-    background-color: #000000;
+    background-color: #000;
     color: #0800e7;
   }
 
-  .album-list-dark {
+  .album-names {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .album-names-container {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .album-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
     height: 100vh;
+  }
+  .album-list-background {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    background-color: #000;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .album-list-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .audio-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: none;
+    border: 2px solid #0800e7;
+  }
+
+  .play-pause-icon {
+    height: 65%;
+    color: #0800e7;
+  }
+
+  .track-title {
+    font-family: dosis;
+    font-size: 2em;
+    margin-left: 10px;
+    color: #0800e7;
+  }
+
+  .track {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .albums-recorded {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #000;
+    width: 100vw;
+    justify-content: space-around;
+    align-content: flex-start;
+    min-height: 100vh;
+  }
+
+  .albums-recorded-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #000;
+    width: 100vw;
+    padding: 20px;
+    justify-content: space-around;
+    align-content: flex-start;
+  }
+
+  .albums-recorded-title {
+    font-family: "DM sans";
+    color: #0800e7;
+    font-size: 4em;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .albums-played-on {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: space-around;
+    align-content: flex-start;
+    min-height: 100vh;
+  }
+
+  .albums-played-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    padding: 20px;
+    justify-content: space-around;
+    align-content: flex-start;
+  }
+
+  .albums-played-title {
+    font-family: "DM sans";
+    font-size: 4em;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .albums-played-main {
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .album-name-dark {
+    background-color: #000;
+    font-size: 1.5em;
+    min-width: auto;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50px;
+    border: 2px dashed #0800e7;
+    margin: 0px 10px 20px 0px;
+    color: #0800e7;
+  }
+
+  .album-name-dark:hover {
+    background-color: #0800e7;
+    color: #000;
+  }
+
+  .album-names-container-dark {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    align-items: center;
+    padding-top: 40px;
+  }
+
+  .album-list-dark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+  }
+
+  .album-list-background-dark {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    background-color: #0800e7;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .album-list-container-dark {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .album-names-container-scroll {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+  }
+
+  .album-name-smaller {
+    background-color: #0700e7;
+    font-size: 1.5em;
+    min-width: auto;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50px;
+    border: 2px dashed black;
+    margin: 0px 0px 20px 10px;
+  }
+
+  .album-name-smaller:hover {
+    background-color: #000;
+    color: #0800e7;
   }
 
   .iframe {
     border: 0;
-    width: 310px;
-    height: 417px;
-  }
-
-  .album-name-smaller {
-    font-size: 1.3em;
-  }
-
-  .album-name-smaller:hover {
-    background-color: #0800e7;
-    color: #000000;
+    width: 285px;
+    height: 394px;
   }
 }
 
-@media (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 85%;
+    margin: 20px 0;
+  }
+
+  .header {
+    width: 100%;
+  }
+
   h1 {
-    font-size: 7em;
-    font-family: "DM Sans";
-    margin: 0px;
+    font-size: 8em;
   }
 
   header p {
+    font-size: 2.5em;
+  }
+
+  .employment {
+    text-align: center;
+    background-color: #0800e7;
+  }
+
+  .employment .header {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .employment-content {
+    overflow-y: auto;
+    background-color: #0800e7;
+    color: #ffffff;
+    padding-bottom: 16%;
+  }
+
+  .resume {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 10px 30px;
+    color: #000;
+  }
+
+  .job-title {
+    font-size: 60px;
+    margin-bottom: 0px;
+  }
+
+  .job-year {
+    font-size: 25px;
+  }
+
+  .job-description {
+    font-size: 20px;
+  }
+
+  .about-page {
+    font-family: "DM Sans";
+    position: relative;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #0800e7;
+    overflow: hidden;
+  }
+
+  .about-page header {
+    width: 100%;
+  }
+
+  .skills-container {
+    font-family: "Dosis";
+    font-size: 1.25em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #000;
+    color: #0700e7;
+    padding: 35px 20px;
+    max-width: max-content;
+    width: auto;
+  }
+
+  .skills-container p {
+      margin: 10px 0px 10px 0px;
+      font-size: 1.7em;
+      text-align: center;
+    }
+
+  .email {
+    font-size: 4.5em;
+    margin: 0px;
+  }
+
+  .blurb {
+    width: 85%;
     font-size: 2em;
   }
+
+  .art-content {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .art-button-wrapper {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+  }
+
+  @keyframes strobeEffect {
+    0% { background-color: #000; color: #0800e7}
+    25% { background-color: #0800e7; color: #000 }
+    50% { background-color: #000; color: #0800e7}
+    75% { background-color: #0800e7; color: #000 }
+    100% { background-color: #000; color: #0800e7}
+  }
+
+  .art-page-button {
+    text-decoration: none;
+    font-family: 'DM Sans';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    background: #0800e7;
+    border: none;
+    font-weight: bold;
+    color: #000;
+    height: 70vh;
+    width: 70vh;
+  }
+
+  .art-page-button:hover {
+    color: #0800e7;
+    animation: strobeEffect 0.6s infinite;
+  }
+
+  .music-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+  }
+
+  .music-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .music-header h1 {
+    margin: 0px 20px 0px 0px;
+  }
+
+  .music-page-title {
+    display: flex;
+    justify-content: flex-end;
+    flex: 0 1 auto;
+  }
+
+  .music-page-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  .music-page-menu-button {
+    font-family: 'DM Sans';
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    background: #000;
+    border: none;
+    font-weight: bold;
+
+    text-decoration: none;
+    color: #0800e7;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .music-page-menu-button:hover {
+    background-color: #0800e7;
+    color: #000;
+  }
+
+  .albums-recorded {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #000;
+    width: 100vw;
+    justify-content: space-around;
+    align-content: flex-start;
+    min-height: 100vh;
+  }
+
+  .albums-recorded-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #000;
+    width: 100vw;
+    padding: 20px;
+    justify-content: space-around;
+    align-content: flex-start;
+  }
+
+  .albums-recorded-title {
+    font-family: "DM sans";
+    color: #0800e7;
+    font-size: 4em;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .albums-played-on {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: space-around;
+    align-content: flex-start;
+    min-height: 100vh;
+  }
+
+  .albums-played-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    padding: 20px;
+    justify-content: space-around;
+    align-content: flex-start;
+  }
+
+  .albums-played-title {
+    font-family: "DM sans";
+    font-size: 4em;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .albums-played-main {
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .music-content {
+    display: flex;
+  }
+
+  .album-name {
+    background-color: #0700e7;
+    font-size: 2.5em;
+    width: 70%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50px;
+    border: 2px dashed black;
+    margin-bottom: 20px;
+  }
+
+  .album-name:hover {
+    background-color: #000;
+    color: #0800e7;
+  }
+
+  .album-names {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .album-names-container {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .album-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 100vh;
+  }
+  .album-list-background {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    background-color: #000;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .album-list-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .album-name-dark {
+    background-color: #000;
+    font-size: 1.6em;
+    width: 70%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50px;
+    border: 2px dashed #0800e7;
+    margin-bottom: 20px;
+    color: #0800e7;
+  }
+
+  .album-name-dark:hover {
+    background-color: #0800e7;
+    color: #000;
+  }
+
+  .album-names-container-dark {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    align-items: center;
+    padding-top: 40px;
+  }
+
+  .album-list-dark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+  }
+
+  .album-list-background-dark {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    background-color: #0800e7;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .album-list-container-dark {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .album-names-container-scroll {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+  }
+
+  .album-name-smaller {
+    background-color: #0700e7;
+    font-size: 1.6em;
+    width: 70%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50px;
+    border: 2px dashed black;
+    margin-bottom: 20px;
+  }
+
+  .album-name-smaller:hover {
+    background-color: #000;
+    color: #0800e7;
+  }
+
+  .audio-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: none;
+    border: 2px solid #0800e7;
+  }
+
+  .play-pause-icon {
+    height: 65%;
+    color: #0800e7;
+  }
+
+  .track-title {
+    font-family: dosis;
+    font-size: 3em;
+    margin-left: 10px;
+    color: #0800e7;
+  }
+
+  .track {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .visual-content {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    font-size: 9em;
+    font-family: "DM Sans";
+  }
+
+  .visual-content:hover {
+    color: #0800e7;
+    animation: strobeEffect 0.6s infinite;
+  }
+
+  .visual-content {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    font-size: 9em;
+    font-family: "DM Sans";
+  }
+
+  .portfolio-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .portfolio-write-up {
+    font-size: 2em;
+  }
+
+  .arrowButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    aspect-ratio: 1 / 1;
+    border: 2px solid #000;
+    background-color: #0800e700;
+    font-size: 50px;
+    line-height: 1;
+    transition: background-color 0.2s;
+    z-index: 10;
+  }
+
+  .arrowButton:hover {
+    background-color: #000000;
+    color: #0800e7;
+  }
+
+  .arrowButton svg {
+    height: 100%;
+    width: 100%;
+    color: #000;
+    }
 
   .button {
     text-decoration: none;
@@ -1369,7 +1768,12 @@ header p {
     padding: 15px 30px;
     background-color: #0800e7;
     font-size: 2.5em;
-    transition: none;
+    transition: background-color 0.2s;
+  }
+
+  .button:hover {
+    background-color: #000000;
+    color: #0800e7;
   }
 
   .button-art{
@@ -1380,52 +1784,149 @@ header p {
     border-radius: 50px 5px 50px 5px;
   }
 
-  .job-title {
-    font-family: 'Dosis';
+  .iframe{
+    border: 0;
+    width: 380px;
+    height: 500px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  h1 {
+    font-size: 10em;
+  }
+
+  .button {
+    font-size: 3.2em;
+  }
+
+  header p {
     font-size: 3em;
-    margin-bottom: 0px;
   }
 
-  .job-year {
-    font-family: 'Dosis';
-    font-size: 1.25em;
-    margin: 10px 0px 0px 0px;
+  .music-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
   }
 
-  .portfolio-write-up {
-    font-size: 2em;
-  }
-
-  .email {
-    font-size: 2.5em;
-    margin: 0px;
-  }
-
-  .visual-content {
-    font-size: 6em;
-  }
-
-  .music-page-menu {
-    flex-direction: column;
+  .music-header h1 {
+    margin: 0px 20px 0px 0px;
   }
 
   .album-name {
-    font-size: 2em;
-  }
-
-  .track-title {
-    font-size: 2em;
+    font-size: 3em;
   }
 
   .album-name-dark {
-    font-size: 1.3em;
-  }
-
-  .album-list-dark {
-    height: 100vh;
+    font-size: 2em;
+    padding: 15px;
   }
 
   .album-name-smaller {
-    font-size: 1.3em;
+    font-size: 2em;
+    padding: 15px;
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  h1 {
+    font-size: 18em;
+  }
+
+  .button {
+    font-size: 6em;
+    padding: 20px 60px;
+  }
+
+  .button-art {
+    border-radius: 100px;
+  }
+
+  .button-about {
+    border-radius: 100px 5px 100px 5px;
+  }
+
+  header p {
+    font-size: 4.5em;
+  }
+
+  .about-page h1 {
+    font-size: 18em;
+  }
+
+  .blurb {
+    width: 90%;
+    font-size: 5em;
+  }
+
+  .skills-container {
+    font-size: 2.25em;
+    gap: 35px;
+    padding: 40px 50px;
+  }
+
+  .portfolio-write-up {
+    font-size: 5em;
+  }
+
+  .art-page-button {
+    font-size: 11em;
+  }
+
+  .visual-content {
+    font-size: 12em;
+  }
+
+  .music-page-menu-button {
+    font-size: 4.5em;
+  }
+
+  .music-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .music-header h1 {
+    margin: 0px 20px 0px 0px;
+  }
+
+  .album-name {
+    font-size: 5em;
+    padding: 20px;
+    border-radius: 100px;
+  }
+
+  .track-title {
+    font-size: 5em;
+  }
+
+  .audio-button {
+    width: 85px;
+    height: 85px;
+  }
+
+  .album-name-dark {
+    font-size: 3.5em;
+    padding: 20px;
+    border-radius: 100px;
+    margin-bottom: 35px;
+  }
+
+  .album-names-container-dark {
+    padding-top: 75px;
+  }
+
+  .album-name-smaller {
+    font-size: 3.5em;
+    padding: 25px;
+    border-radius: 100px;
+  }
+
+  .iframe {
+    border: 0;
+    width: 633px;
+    height: 740px;
   }
 }

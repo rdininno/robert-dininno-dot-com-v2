@@ -207,11 +207,6 @@ header p {
   margin: 10px;
 }
 
-.music-page-menu-button:hover {
-  background-color: #0800e7;
-  color: #000;
-}
-
 .albums-recorded {
   display: flex;
   flex-direction: column-reverse;
@@ -283,6 +278,7 @@ header p {
 }
 
 .album-name {
+  color: #000;
   background-color: #0700e7;
   font-size: 1.5em;
   min-width: max-content;
@@ -292,11 +288,6 @@ header p {
   border: 2px dashed black;
   margin-bottom: 20px;
   margin-top: 20px;
-}
-
-.album-name:hover {
-  background-color: #0800e7;
-  color: #000;
 }
 
 .album-names {
@@ -342,7 +333,9 @@ header p {
 }
 
 .album-name-dark {
+  font-family: "dosis";
   background-color: #000;
+  text-decoration: none;
   font-size: 1.25em;
   min-width: max-content;
   text-align: center;
@@ -351,11 +344,6 @@ header p {
   border: 2px dashed #0800e7;
   margin-bottom: 20px;
   margin-top: 20px;
-  color: #0800e7;
-}
-
-.album-name-dark:hover {
-  background-color: #000;
   color: #0800e7;
 }
 
@@ -405,7 +393,10 @@ header p {
 }
 
 .album-name-smaller{
+  font-family: "dosis";
+  color: #000;
   background-color: #0700e7;
+  text-decoration: none;
   font-size: 1.5em;
   min-width: max-content;
   text-align: center;
@@ -414,11 +405,6 @@ header p {
   border: 2px dashed black;
   margin-bottom: 20px;
   margin-top: 20px;
-}
-
-.album-name-smaller:hover {
-  background-color: #0800e7;
-  color: #000;
 }
 
 .audio-button {

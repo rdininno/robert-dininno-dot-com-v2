@@ -21,6 +21,13 @@ const viteDevServer =
 
 app.use(cors());
 
+app.use((req, res, next) => {
+  if (req.url.startsWith("/.git")) {
+    return res.status(403).send("Forbidden");
+  }
+  next();
+});
+
 app.use(
   viteDevServer ? viteDevServer.middlewares : express.static("build/client")
 );

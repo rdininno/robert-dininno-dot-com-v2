@@ -12,7 +12,7 @@ export default function Index() {
   return (
     <div className="main-page">
       <header className="header">
-        <h1>Robert Di Ninno</h1>
+        <h1>Robert Di&nbsp;Ninno</h1>
       </header>
         <div className="description">
           <p>Full stack developer with a passion for the front end.</p>

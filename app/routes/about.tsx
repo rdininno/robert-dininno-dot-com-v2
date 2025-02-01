@@ -1,8 +1,8 @@
 export default function About(){
   return (
     <div className="about-page">
-      <header className="header">
-        <h1>About</h1>
+      <header className="about-header">
+        <h1 className="about-title">About</h1>
       </header>
 
       <p className="email">Email: robertdininno@gmail.com</p>
@@ -14,14 +14,14 @@ export default function About(){
 
       <div className="skills-container">
         <p>JavaScript</p>
-        <p>ReactJS</p>
+        <p>React</p>
         <p>Remix</p>
+        <p>NextJS</p>
         <p>HTML/CSS/Tailwind</p>
-        <p>Ruby</p>
+        <p>Liquid</p>
         <p>Pheonix LiveView</p>
         <p>Elixir</p>
-        <p>Liquid</p>
-        <p>VueJS</p>
+        <p>Ruby</p>
       </div>
     </div>
   );

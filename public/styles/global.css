@@ -154,40 +154,41 @@ html, body {
 }
 
 .about-page h1 {
-  font-size: 4.25em;
+  font-size: 13vw;
+  margin: 0;
 }
 
 .skills-container {
   font-family: "Dosis";
   display: flex;
   flex-direction: row;
-  font-size: 1.125em;
+  font-size: 1.5vw;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 0px 5px;
-  background-color: #000;
+  gap: 0px 10px;
+  border: 2px dashed #000;
   color: #0700e7;
   padding: 35px 20px;
-  max-width: max-content;
   width: auto;
 }
 
 .skills-container p {
   margin: 5px 0px;
-  font-size: 1.125em;
+  font-size: 2.25vw;
+  color: #000;
 }
 
 .email {
-  font-size: 1.125em;
+  font-size: 2vw;
   margin: 0px;
 }
 
 .blurb {
   width: 100%;
-  font-size: 1.5em;
+  font-size: 2.5vw;
 }
 
-.art-content {
+/* .art-content {
   display: flex;
   flex-direction: column;
   width: 100vw;
@@ -530,17 +531,17 @@ html, body {
 
 .button-art{
   border-radius: 50px;
-}
+} */
 
 /* .button-about{
   border-radius: 50px 5px 50px 5px;
 } */
 
-.iframe {
+/* .iframe {
   border: 0;
   width: 300px;
   height: 406px;
-}
+} */
 /* 
 @media screen and (min-width: 425px) {
   h1 {

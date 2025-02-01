@@ -3,15 +3,15 @@ import Job from "../components/Job";
 export default function Employment(){
   return (
     <div className="employment" id="employment-section">
-      <header className="header">
-        <h1>Employment</h1>
+      <header className="employment-header">
+        <h1 className="employment-title">Experience</h1>
       </header>
 
       <div className="employment-content">
         <section className="experience" id="resume-section">
           <Job
             title="Developer at OneFeather Mobile Technologies Ltd."
-            year="Aug 2022 - Present"
+            year="Aug 2022 - Sept 2024"
             location="Victoria BC"
             description={[
               "Supported the development and refinement of front and back-end web development using Ruby on Rails, JavaScript, Elixir, Phoenix LiveView, React, and HTML/CSS to build applications to support Indigenous sovereignty in the digital era, such as status card renewal support and digital voting platforms for Nation elections.",

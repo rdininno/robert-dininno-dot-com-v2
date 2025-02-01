@@ -1,41 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+@keyframes strobeEffect {
+  0% { background-color: #000; color: #0800e7}
+  25% { background-color: #0800e7; color: #000 }
+  50% { background-color: #000; color: #0800e7}
+  75% { background-color: #0800e7; color: #000 }
+  100% { background-color: #000; color: #0800e7}
+}
+
 html, body {
   height: 100vh;
   margin: 0;
   background-color: #0800e7;
   overflow-x: hidden;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 20% 5% 75%;
+  gap: 10px;
+  width: calc(100vw - 40px);
+  height: calc(100vh - 40px);
   text-align: center;
 }
 
 .header {
-  width: 90%;
-}
-
-.menu {
+  grid-column: span 2;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 85%;
-  margin: 20px 0;
-  gap: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
-h1 {
-  font-size: 2.25em;
+.description {
+  grid-column: span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vw;
   font-family: "DM Sans";
-  margin: 0px;
 }
 
-header p {
+.header h1 {
+  font-size: 10vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "DM Sans";
+  margin: 0;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 4vw;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
   font-family: 'DM Sans';
-  font-size: 1em;
+  padding: 15px 30px;
+  background-color: #000;
+  color: #0800e7;
+  border-radius: 5px;
+  border: 2px solid #0800e7;
+}
+
+.button:hover {
+  background-color: #0800e7;
+  color: #000;
+  border: 2px dashed #000;
+  animation: strobeEffect 1.5s infinite;
 }
 
 .employment {
@@ -474,36 +525,20 @@ header p {
   text-align: center;
 }
 
-.button {
-  text-decoration: none;
-  font-family: 'DM Sans';
-  color: #0800e7;
-  border-radius: 5px;
-  border: 2px solid #0800e7;
-  padding: 15px 30px;
-  background-color: #000;
-  font-size: 1.5em;
-}
-
-.button:hover {
-  background-color: #000000;
-  color: #0800e7;
-}
-
 .button-art{
   border-radius: 50px;
 }
 
-.button-about{
+/* .button-about{
   border-radius: 50px 5px 50px 5px;
-}
+} */
 
 .iframe {
   border: 0;
   width: 300px;
   height: 406px;
 }
-
+/* 
 @media screen and (min-width: 425px) {
   h1 {
     font-size: 3em;
@@ -1915,4 +1950,4 @@ header p {
     width: 633px;
     height: 740px;
   }
-}
+} */
